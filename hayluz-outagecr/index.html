@@ -1,13 +1,159 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hayluz-outagecr</title>
+    <meta name="description" content="¿Hay Luz? (OutageCR) - Plataforma pública para reportar y verificar cortes de luz, agua e internet en Costa Rica en tiempo real." />
+    <title>¿Hay Luz? OutageCR</title>
+    <style>
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+        --success-color: #28a745;
+        --danger-color: #dc3545;
+        --warning-color: #ffc107;
+        --info-color: #17a2b8;
+        --light-color: #f8f9fa;
+        --dark-color: #343a40;
+        --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-family-sans);
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        line-height: 1.6;
+      }
+
+      .landing-container {
+        max-width: 960px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 0;
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+      }
+
+      .intro-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .intro-section p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #0056b3;
+      }
+
+      .features-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .feature-card {
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .feature-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .feature-card p {
+        color: var(--secondary-color);
+      }
+
+      .app-loader {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 2rem;
+        border-top: 1px solid #dee2e6;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="landing-container">
+      <header>
+        <h1>¿Hay Luz? OutageCR</h1>
+        <p>Tu plataforma comunitaria para cortes de servicios en Costa Rica</p>
+      </header>
+
+      <section class="intro-section">
+        <p>
+          ¿Hay Luz? (OutageCR) es una plataforma pública y fácil de usar, diseñada para que todos en Costa Rica puedan verificar y reportar cortes de electricidad, agua e internet en tiempo real. Empoderamos a la comunidad con información precisa y actualizada.
+        </p>
+        <a href="#app" class="cta-button">Ir a la Aplicación</a>
+      </section>
+
+      <section class="features-section">
+        <div class="feature-card">
+          <h3>Mapa Interactivo</h3>
+          <p>Visualiza los cortes de servicios en un mapa de Costa Rica, con filtros por tipo y ubicación.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Reportes Anónimos</h3>
+          <p>Reporta un corte de forma rápida y anónima para ayudar a mantener a la comunidad informada.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Notificaciones en Tiempo Real</h3>
+          <p>Recibe alertas sobre nuevos cortes en las áreas que te interesan, directamente en tu navegador.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Validación Comunitaria</h3>
+          <p>La comunidad valida los reportes para asegurar la fiabilidad de la información.</p>
+        </div>
+      </section>
+
+      <div id="app" class="app-loader">
+        <p>Cargando la aplicación...</p>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
